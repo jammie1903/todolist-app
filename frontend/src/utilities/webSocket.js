@@ -1,8 +1,11 @@
 import store from '../store'
 
+const isSecure = window.location.protocol === 'https:'
+const protocol = isSecure ? 'wss' : 'ws'
+
 const url = process.env.NODE_ENV === 'production' ? 
-  `ws://${window.location.host}` : 
-  'ws://localhost:3001'
+  `${protocol}://${window.location.host}` : 
+  `${protocol}://localhost:3001`
 
 let promise = null
 
