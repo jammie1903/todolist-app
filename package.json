@@ -6,9 +6,10 @@
   "scripts": {
     "install:frontend": "npm install --prefix frontend",
     "install:server": "npm install --prefix server",
+    "postinstall": "npm run install:frontend && npm run install:server",
     "build:frontend": "npm run build --prefix frontend",
     "build:server": "npm run build --prefix server",
-    "build": "npm run install:frontend && npm run build:frontend && npm run install:server && npm run build:server" ,
+    "build": "npm run build:frontend && npm run build:server" ,
     "start": "npm start --prefix server",
     "start:frontend": "npm start --prefix frontend"
   },
