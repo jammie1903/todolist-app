@@ -1,0 +1,17 @@
+{
+  "name": "todolist-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "install:frontend": "npm install --prefix frontend",
+    "install:server": "npm install --prefix server",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:server": "npm run build --prefix server",
+    "build": "npm run build:frontend && npm run build:server" ,
+    "start": "npm start --prefix server",
+    "start:frontend": "npm start --prefix frontend"
+  },
+  "author": "Jamie Pennell",
+  "license": "ISC"
+}
