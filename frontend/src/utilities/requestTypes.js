@@ -1,3 +1,5 @@
-export const ADD = 'ADD'
-export const DELETE = 'DELETE'
+export const ADD = 'ADD_ITEM'
+export const DELETE = 'DELETE_ITEM'
+export const ADD_LIST = 'ADD_LIST'
+export const DELETE_LIST = 'DELETE_LIST'
 export const SET_STATE = 'SET_STATE'

@@ -1,10 +1,22 @@
 interface AddMessage {
-  type: 'ADD'
-  text: string
+  type: 'ADD_ITEM'
+  text: string,
+  listId: string
+}
+
+interface AddListMessage {
+  type: 'ADD_LIST'
+  text: string,
 }
 
 interface DeleteMessage {
-  type: 'DELETE'
+  type: 'DELETE_ITEM'
+  id: string
+}
+
+
+interface DeleteListMessage {
+  type: 'DELETE_LIST'
   id: string
 }
 
@@ -14,4 +26,4 @@ interface SetStateMessage {
   value: boolean
 }
 
-export type SignalMessage = AddMessage | DeleteMessage | SetStateMessage
+export type SignalMessage = AddMessage | DeleteMessage | AddListMessage | DeleteListMessage | SetStateMessage

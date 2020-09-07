@@ -19,7 +19,7 @@ export abstract class WebSocketHandler {
           data = JSON.parse(message)
         }
         catch (e) {
-          this.send(ws, { type: 'ERROR', message: 'Invalid JSON was received' })
+          this.sendError(ws, 'Invalid JSON was received')
         }
 
         if(data) this.onMessage(ws, data)
@@ -48,6 +48,11 @@ export abstract class WebSocketHandler {
   send(ws: WebSocket, message: any) {
     ws.send(JSON.stringify(message))
   }
+
+  sendError(ws: WebSocket, message: string) {
+    this.send(ws, { type: 'ERROR', message })
+  }
+
 
   broadcast(message: any) {
     this.wss.clients.forEach(client => this.send(client, message))

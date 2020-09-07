@@ -3,32 +3,27 @@ import PropTypes from 'prop-types'
 import TodoItem from './TodoItem'
 import styled from 'styled-components'
 import CreateItemForm from './CreateItemForm'
-
-const Container = styled.div`
-  margin: 16px;
-  padding: 16px;
-  border: 1px solid ${props => props.theme.colors.border};
-  border-radius: 8px;
-  background: ${props => props.theme.colors.background};
-`
+import Panel from './Panel'
 
 const List = styled.ul`
   padding: 0;
   margin: 0;
 `
 
-const TodoList = ({ items, onToggleItem }) => (
-  <Container>
-    <CreateItemForm />
+const TodoList = ({ id, title, items, onToggleItem }) => (
+  <Panel title={title}>
+    <CreateItemForm listId={id} />
     <List>
       {items && items.map(todo => (
         <TodoItem key={todo.id} {...todo} onChange={() => onToggleItem(todo.id, !todo.state)} />
       ))}
     </List>
-  </Container>
+  </Panel>
 )
 
 TodoList.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

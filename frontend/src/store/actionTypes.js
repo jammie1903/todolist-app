@@ -1,4 +1,6 @@
 export const NEW_ITEM = 'NEW_ITEM'
+export const NEW_LIST = 'NEW_LIST'
 export const ITEM_DELETED = 'ITEM_DELETED'
 export const ITEM_UPDATED = 'ITEM_UPDATED'
+export const LIST_DELETED = 'LIST_DELETED'
 export const INIT = 'INIT'

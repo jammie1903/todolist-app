@@ -22,7 +22,6 @@ run `npm start`
 ## Tasks still left to complete
 
 * Unit tests
-* Allowing for multiple todo lists
 * Connecting to MongoDB
 * Adding a footer and relevant icons
 * Allow edit/delete of items (already possible in the back-end)
