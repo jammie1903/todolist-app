@@ -19,7 +19,7 @@ const Text = styled.span`
 
 const Checkbox = styled.div`
   position: relative;
-  background-color: #ffffff;
+  background-color: ${props => props.theme.colors.white};
   margin: 0 8px 0 0;
   display: block;
   overflow: hidden;
@@ -36,7 +36,7 @@ const Checkbox = styled.div`
     top: 10%;
     width: 22.5%;
     height: 50%;
-    border: solid #ffffff;
+    border: solid ${props => props.theme.colors.white};
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -52,7 +52,7 @@ const CheckboxBackground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: #666666;
+  background: ${props => props.theme.colors.selected};
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -68,7 +68,7 @@ const CheckboxBorder = styled.div`
   position: absolute;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid #000000;
+  border: 1px solid ${props => props.theme.colors.black};
   transition: border 300ms;
 `
 
@@ -83,7 +83,7 @@ const CheckboxInput = styled.input.attrs({type: 'checkbox'})`
 
   &:focus ~ ${CheckboxBorder},
   &:active ~ ${CheckboxBorder} {
-    border: 1px solid #ff6605;
+    border: 1px solid ${props => props.theme.colors.focus};
   }
 `
 

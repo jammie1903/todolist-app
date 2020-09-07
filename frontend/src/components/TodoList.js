@@ -7,9 +7,9 @@ import CreateItemForm from './CreateItemForm'
 const Container = styled.div`
   margin: 16px;
   padding: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid ${props => props.theme.colors.border};
   border-radius: 8px;
-  background: #f8f8f8;
+  background: ${props => props.theme.colors.background};
 `
 
 const List = styled.ul`

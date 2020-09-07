@@ -24,6 +24,5 @@ run `npm start`
 * Unit tests
 * Allowing for multiple todo lists
 * Connecting to MongoDB
-* Adding a header, footer and relevant icons
-* Centralising theme colours for styled components
+* Adding a footer and relevant icons
 * Allow edit/delete of items (already possible in the back-end)
